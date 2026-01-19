@@ -1,0 +1,82 @@
+{
+  "agent": {
+    "library-researcher": {
+      "mode": "primary",
+      "model": "anthropic/claude-sonnet-4-5",
+      "prompt": "{file:./agent-instructions/library-researcher.md}",
+      "description": "Researches Python libraries for practical agentic application use cases",
+      "permission": {
+        "webfetch": "allow",
+        "websearch": "allow",
+        "read": "allow"
+      }
+    },
+    "web-search-researcher": {
+      "mode": "primary",
+      "model": "anthropic/claude-sonnet-4-5",
+      "prompt": "{file:./agent-instructions/web-search-researcher.md}",
+      "description": "Web research specialist for finding accurate, relevant information",
+      "color": "#FFFF00",
+      "permission": {
+        "websearch": "allow",
+        "webfetch": "allow",
+        "todowrite": "allow",
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow"
+      }
+    },
+    "codebase-locator": {
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-5",
+      "prompt": "{file:./agent-instructions/codebase-locator.md}",
+      "description": "Locates files, directories, and components relevant to a feature or task",
+      "permission": {
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow",
+        "bash": "allow"
+      }
+    },
+    "codebase-pattern-finder": {
+      "mode": "subagent",
+      "model": "anthropic/claude-opus-4",
+      "prompt": "{file:./agent-instructions/codebase-pattern-finder.md}",
+      "description": "Finds similar implementations, usage examples, or existing patterns",
+      "permission": {
+        "grep": "allow",
+        "glob": "allow",
+        "read": "allow",
+        "list": "allow",
+        "bash": "allow"
+      }
+    },
+    "codebase-analyzer": {
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-5",
+      "prompt": "{file:./agent-instructions/codebase-analyzer.md}",
+      "description": "Analyzes codebase implementation details",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow",
+        "bash": "allow"
+      }
+    },
+    "technical-writer": {
+      "mode": "subagent",
+      "model": "anthropic/claude-opus-4-5",
+      "prompt": "{file:./agent-instructions/technical-writer.md}",
+      "description": "Creates clear, comprehensive technical documentation",
+      "permission": {
+        "read": "allow",
+        "write": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow"
+      }
+    }
+  }
+}
