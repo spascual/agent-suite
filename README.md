@@ -5,10 +5,11 @@
   - Inline Chat: Opus 4.5 (via Github Copilot)
   - Agentic Pannel: Claude Code tab (> OpenCode > Zed Agent)
     - Workflows
-  - CLI: Claude Code / OpenCode
+  - CLI: Claude Code / OpenCode (> Am > Codex)
 
-* Terminal: oh-my-zsh, tmux
-  - Check out plugins: git, github cli, docker, docker-compose
+* Terminal:
+  - tmux: for terminal panel management, and persistance of OpenCode/Claude sessions
+  - oh-my-zsh: check out plugins – git, github cli, docker, docker-compose
 
 * Python
   - Project Manager: uv
@@ -16,5 +17,14 @@
   - Python Environment: .venv
   - Environment/Config: .env -> config.py
 
+* CLI Tools: for agent use during local development
+  - `rg` (ripgrep): Fast grep searches for code navigation
+  - `gh` CLI: GitHub Actions logs, issues, API
+  - `pixi run`: Environment-aware Python execution
+  - `markdownlint`: Validation
+  - `uvx` commands: Package execution
+    ** Include Local Norms in AGENTS.md **
+
 ### Thought Leaders on Agentic Coding
+
 - https://www.anaconda.com/blog/challenging-claude-code-coding-competition
