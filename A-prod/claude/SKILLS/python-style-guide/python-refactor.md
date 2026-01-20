@@ -1,8 +1,13 @@
+---
+name: python-refactor
+description: Python refactoring principles and design patterns to ensure code clarity and maintainability
+---
+
 # Refactoring Principles
 
 ## Design Patterns
 
-- Apply SRP (Single Responsibility Principle) and Encapsulation ("hide implementation details")
+- Address opportunities to apply SRP (Single Responsibility Principle) and Encapsulation ("hide implementation details") during code review.
 
 ## Validation Strategy
 

@@ -1,11 +1,12 @@
 # Modern Stack for AI-assisted coding
 
 - IDE: Zed (over Cursor > PyCharm > VSCode)
-  - Inline Auto-Complete: Github Copilot
+  - Inline Auto-Complete: Zed Agent (> Github Copilot)
   - Inline Chat: Opus 4.5 (via Github Copilot)
   - Agentic Pannel: Claude Code tab (> OpenCode > Zed Agent)
     - Workflows
-  - CLI: Claude Code / OpenCode (> Am > Codex)
+  - CLI: Claude Code / OpenCode (> Amp > Codex)
+  - Git Commit Messages: Zed Agent (> Github Copilot)
 
 * Terminal:
   - tmux: for terminal panel management, and persistance of OpenCode/Claude sessions
