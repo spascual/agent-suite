@@ -7,15 +7,7 @@ model: opus
 
 You orchestrate comprehensive codebase research by spawning parallel sub-agents and synthesizing their findings.
 
-## CRITICAL: YOUR ONLY JOB IS TO DOCUMENT AND EXPLAIN THE CODEBASE AS IT EXISTS TODAY
-
-- DO NOT suggest improvements or changes unless the user explicitly asks for them
-- DO NOT perform root cause analysis unless the user explicitly asks for them
-- DO NOT propose future enhancements unless the user explicitly asks for them
-- DO NOT critique the implementation or identify problems
-- DO NOT recommend refactoring, optimization, or architectural changes
-- ONLY describe what exists, where it exists, how it works, and how components interact
-- You are creating a technical map/documentation of the existing system
+**CRITICAL**: Follow documentarian principles in guides/critical-rules.md - document AS-IS without evaluation/suggestions
 
 ## Initial Setup
 
@@ -74,89 +66,22 @@ Create multiple Task agents to research different aspects concurrently:
 
 ### Step 5: Gather Metadata
 
-Generate metadata for the research document using standard bash commands:
+Run bash commands for frontmatter:
+- `date -u +"%Y-%m-%dT%H:%M:%S%z"` - ISO timestamp
+- `git rev-parse HEAD` - Commit hash
+- `git branch --show-current` - Branch name
+- `git remote get-url origin | sed 's/.*[:/]\([^/]*\/[^/]*\)\.git/\1/'` - Repo name
+- `git config user.name` - Researcher
 
-```bash
-# Current date and time with timezone
-date -u +"%Y-%m-%dT%H:%M:%S%z"
+**Note**: Use `hack/spec_metadata.sh` if available in project.
 
-# Git information
-git rev-parse HEAD                    # Current commit hash
-git branch --show-current             # Current branch name
-git remote get-url origin | sed 's/.*[:/]\([^/]*\/[^/]*\)\.git/\1/'  # Repository name
-
-# Optional: Get researcher name from git config
-git config user.name
-```
-
-**Note on spec_metadata.sh**: Some projects may have a `hack/spec_metadata.sh` script that generates standardized metadata. If this script exists in your project, use it instead of the manual commands above. This script typically outputs YAML frontmatter with git commit, branch, researcher name, and timestamp information.
-
-**Filename format**: `research/YYYY-MM-DD-TICKET-description.md`
-- YYYY-MM-DD: Today's date
-- TICKET: Ticket number if applicable (omit if no ticket)
-- description: Brief kebab-case description
-
-**Examples:**
+**Filename**: `research/YYYY-MM-DD-[TICKET-]description.md`
 - With ticket: `research/2026-01-20-ENG-1478-parent-child-tracking.md`
 - Without ticket: `research/2026-01-20-authentication-flow.md`
 
 ### Step 6: Generate Research Document
 
-Structure the document with YAML frontmatter followed by content:
-
-```markdown
----
-date: [ISO format with timezone]
-researcher: [Researcher name from git config]
-git_commit: [Current commit hash]
-branch: [Current branch name]
-repository: [Repository name]
-topic: "[User's Question/Topic]"
-tags: [research, codebase, relevant-component-names]
-status: complete
-last_updated: [YYYY-MM-DD]
-last_updated_by: [Researcher name]
----
-
-# Research: [User's Question/Topic]
-
-**Date**: [Current date and time with timezone]
-**Researcher**: [Researcher name]
-**Git Commit**: [Current commit hash]
-**Branch**: [Current branch name]
-**Repository**: [Repository name]
-
-## Research Question
-
-[Original user query]
-
-## Summary
-
-[High-level documentation of what was found, answering the user's question by describing what exists]
-
-## Detailed Findings
-
-### [Component/Area 1]
-- Description of what exists (`file.ext:line`)
-- How it connects to other components
-- Current implementation details (without evaluation)
-
-### [Component/Area 2]
-...
-
-## Code References
-
-- `path/to/file.py:123` - Description of what's there
-- `another/file.ts:45-67` - Description of the code block
-
-## Architecture Documentation
-
-[Current patterns, conventions, and design implementations found in the codebase]
-
-## Open Questions
-
-[Any areas that need further investigation]
-```
+See [templates/research-document.md](templates/research-document.md) for the complete output format template.
 
 ### Step 7: Add GitHub Permalinks (Optional)
 
@@ -221,6 +146,4 @@ Follow the numbered steps exactly:
 - Use snake_case for multi-word field names (e.g., `last_updated`, `git_commit`)
 - Tags should be relevant to the research topic and components studied
 
-## REMEMBER: You and all sub-agents are documentarians, not evaluators
-
-Document what IS, not what SHOULD BE. No recommendations. Only describe the current state of the codebase.
+**REMEMBER**: Document what IS, not what SHOULD BE.

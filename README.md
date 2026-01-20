@@ -7,6 +7,13 @@
     - Workflows
   - CLI: Claude Code / OpenCode (> Amp > Codex)
   - Git Commit Messages: Zed Agent (> Github Copilot)
+  - Code Review: Claude Review (or Cursor BugBot)
+  - Code Debugging: Cursor Debug with GPT5.2 High
+
+* IDE/Terminal Panel Layout
+  - Left Panel: File Explorer
+  - Middle Panel: Current File
+  - Right Panel: AI Agent open in Terminal or AI Panel
 
 * Terminal:
   - tmux: for terminal panel management, and persistance of OpenCode/Claude sessions
@@ -26,6 +33,22 @@
   - `uvx` commands: Package execution
     ** Include Local Norms in AGENTS.md **
 
+* MCPs
+  - (Frontend) Supabase, Firebase
+  - External docs Context7
+
+* Snippets
+  - Whispr Flow: Examples cal link, work email
+
 ### Thought Leaders on Agentic Coding
 
 - https://www.anaconda.com/blog/challenging-claude-code-coding-competition
+
+### Agentic Development Cycle
+
+> Plan (design / review iterative loop) -> Execute -> Test -> Commit
+
+### Use cases
+
+- Integrations (of external packages)
+-

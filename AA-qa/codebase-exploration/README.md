@@ -33,6 +33,13 @@ See [orchestrator.md](./orchestrator.md) for complete workflow.
 
 ## Guides
 
-- [Output Formats](./guides/output-formats.md) - Structured documentation templates
 - [Search Strategies](./guides/search-strategies.md) - Effective search patterns
 - [Critical Rules](./guides/critical-rules.md) - Documentarian principles
+
+## Templates
+
+- [research-document.md](./templates/research-document.md) - Complete research document template
+- [file-locations.md](./templates/file-locations.md) - File location template
+- [implementation-analysis.md](./templates/implementation-analysis.md) - Implementation analysis template
+- [pattern-examples.md](./templates/pattern-examples.md) - Pattern examples template
+- [conventions.md](./templates/conventions.md) - Formatting conventions

@@ -143,17 +143,9 @@ NOT as:
 
 ## File Reference Standards
 
-Every claim must be backed by a file reference:
+**File references**: Use format from templates/conventions.md
 
-**Good:**
-- "Validates signatures at `handlers/webhook.js:15-32`"
-- "Uses offset pagination in `api/users.js:45-67`"
-- "Error handling in `services/processor.js:52`"
-
-**Bad:**
-- "The code validates signatures"
-- "Uses pagination somewhere"
-- "Has error handling"
+Every claim must be backed by a file reference. Good examples show exact locations, bad examples lack specificity.
 
 ## Output Structure Standards
 
