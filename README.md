@@ -43,7 +43,9 @@
 ### Thought Leaders on Agentic Coding
 
 - https://www.anaconda.com/blog/challenging-claude-code-coding-competition
-
+* Packages: 
+	https://github.com/StrongTheDev/logstash-for-zed
+	https://github.com/mirageN1349/browser-tools-context-server
 ### Agentic Development Cycle
 
 > Plan (design / review iterative loop) -> Execute -> Test -> Commit

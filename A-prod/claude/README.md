@@ -2,7 +2,7 @@
 
 ### Claude.md
 
-- Global Location: ~/.claude/CLAUDE.md
+- Global/Personal Location: ~/.claude/CLAUDE.md
 - Project Location: <project_root>/.claude/CLAUDE.md
 
 ### SKILLS
