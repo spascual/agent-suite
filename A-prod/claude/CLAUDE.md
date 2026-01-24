@@ -9,5 +9,5 @@
 
 ## Python
 
-- For Python conventions, see ~/.claude/skills/python-style-guide/
-- For existing codebase documentation, see ~/.claude/skills/codebase-snapshot/
+- For Python conventions, see .claude/skills/python-style-guide/SKILL.md
+- For existing codebase documentation, see .claude/skills/codebase-snapshot/SKILL.md
