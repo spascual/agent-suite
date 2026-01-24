@@ -12,6 +12,6 @@ description: Comprehensive Python coding standards and style conventions for mai
 ## Style References
 
 - For import styles, decorators, control flow, and assertions, see python-conventions.md
-- For naming, docstrings, and reference tools, see python-documentation.md
+- For naming, docstrings, typing annotations and reference tools, see python-documentation.md
 - For pytest usage, test structure, and implementation patterns, see python-testing.md
 - For Design patterns and validation strategies when refactoring code, see python-refactor.md
