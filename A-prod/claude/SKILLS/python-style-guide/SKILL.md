@@ -6,7 +6,7 @@ description: Comprehensive Python coding standards and style conventions for mai
 # Python Style Guide
 
 **Package manager:** `uv`
-
+**Formatter command:** `ruff check --fix --unsafe-fixes`
 **Test command:** `pytest -q`
 
 ## Style References
