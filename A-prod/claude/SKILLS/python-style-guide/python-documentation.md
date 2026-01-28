@@ -7,7 +7,7 @@ description: Python documentation sourcing and writing standards to ensure conci
 
 ## Naming
 
-- Name functions/classes/variables with clear preconditions
+- Name functions/classes/variables with clear preconditions and descriptive names, avoiding single letter names or bigram abbreviations.
 
 ## Docstrings
 
